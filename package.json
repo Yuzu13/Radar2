@@ -1,0 +1,19 @@
+{
+  "name": "radar-segundo-turno",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MVP do Radar do Segundo Turno — comparação de propostas baseada em fontes públicas.",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  }
+}

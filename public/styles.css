@@ -1,0 +1,411 @@
+:root {
+    --ink: #151515;
+    --muted: #666;
+    --line: #e7e4df;
+    --paper: #fff;
+    --soft: #f6f4f0;
+    --accent: #ff5a1f;
+    --accent2: #ff8a52;
+    --radius: 22px
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.wrap {
+    width: min(1120px, calc(100% - 36px));
+    margin: auto
+}
+
+.top {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line)
+}
+
+.nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand {
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 22px
+}
+
+.brand span {
+    color: var(--accent)
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+    font-size: 14px;
+    color: #444
+}
+
+nav a:hover {
+    color: var(--accent)
+}
+
+.hero {
+    background: linear-gradient(135deg, #fff 0%, #fff7f1 100%);
+    padding: 92px 0 82px;
+    border-bottom: 1px solid var(--line)
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    color: var(--accent);
+    margin: 0 0 12px
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: .98;
+    letter-spacing: -4px;
+    margin: 0;
+    max-width: 850px
+}
+
+.hero h1 span {
+    color: #777
+}
+
+.lead {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #555;
+    max-width: 680px;
+    margin: 26px 0
+}
+
+.cta,
+.secondary {
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 20px;
+    font-weight: 800;
+    cursor: pointer
+}
+
+.cta {
+    background: var(--ink);
+    color: #fff
+}
+
+.secondary {
+    background: #fff;
+    border: 1px solid var(--line)
+}
+
+.source-note,
+.muted {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.section {
+    padding: 76px 0
+}
+
+.section.light {
+    background: var(--soft)
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 30px
+}
+
+.section h2 {
+    font-size: 38px;
+    letter-spacing: -1.8px;
+    margin: 0
+}
+
+.stats {
+    display: flex;
+    gap: 18px;
+    color: #555;
+    font-size: 13px
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px
+}
+
+.topic {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .18s
+}
+
+.topic:hover {
+    transform: translateY(-2px);
+    border-color: #cfcac2;
+    box-shadow: 0 10px 30px #0000000b
+}
+
+.topic strong {
+    font-size: 17px
+}
+
+.topic small {
+    display: block;
+    color: var(--muted);
+    margin-top: 7px
+}
+
+.arrow {
+    font-size: 24px;
+    color: var(--accent)
+}
+
+.candidate-heads {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px
+}
+
+.candidate {
+    border-radius: var(--radius);
+    padding: 22px;
+    background: var(--ink);
+    color: #fff
+}
+
+.candidate .num {
+    font-size: 12px;
+    color: #bbb
+}
+
+.candidate h3 {
+    font-size: 26px;
+    margin: 6px 0 0
+}
+
+.proposal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px
+}
+
+.proposal-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 22px;
+    background: #fff
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 18px
+}
+
+.card p {
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 15px
+}
+
+.badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .8px;
+    background: #f0ede8;
+    padding: 6px 8px;
+    border-radius: 999px
+}
+
+.verify {
+    color: #137333;
+    background: #eaf6ed
+}
+
+.source-link {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 800
+}
+
+.disclaimer {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #fff7f1;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5
+}
+
+.sources {
+    display: grid;
+    gap: 10px
+}
+
+.source {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.source a {
+    color: var(--accent);
+    font-weight: 700
+}
+
+.narrow {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.narrow p:not(.eyebrow) {
+    line-height: 1.75;
+    color: #555
+}
+
+.hidden {
+    display: none
+}
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 25px 0;
+    color: #777;
+    font-size: 12px
+}
+
+footer .wrap {
+    display: flex;
+    justify-content: space-between
+}
+
+footer a {
+    color: var(--accent)
+}
+
+@media(max-width:720px) {
+    nav {
+        display: none
+    }
+
+    .hero {
+        padding: 65px 0
+    }
+
+    .hero h1 {
+        letter-spacing: -2.5px
+    }
+
+    .section {
+        padding: 55px 0
+    }
+
+    .topics,
+    .candidate-heads,
+    .proposal-grid {
+        grid-template-columns: 1fr
+    }
+
+    .section-head {
+        align-items: start;
+        flex-direction: column
+    }
+
+    .stats {
+        flex-wrap: wrap
+    }
+
+    .source {
+        flex-direction: column;
+        gap: 8px
+    }
+}
+
+/* Cole ao FINAL do seu public/styles.css (não substitui nada, não muda cores) */
+
+/* Páginas de tema renderizadas no servidor */
+.page-title { font-size: 1.6rem; font-weight: 800; line-height: 1.2; margin: 4px 0 8px; }
+.proposal { padding: 12px 0; border-top: 1px solid var(--border-color); }
+.proposal:first-of-type { border-top: 0; padding-top: 0; }
+.proposal h4 { font-size: 1rem; margin-bottom: 4px; }
+.proposal p { font-size: 0.92rem; margin-bottom: 4px; }
+.proposal a, .muted a { color: var(--accent); word-break: break-word; }
+.badge { display: inline-block; font-size: 0.68rem; font-weight: 700; color: #166534;
+  background: #dcfce7; padding: 2px 6px; border-radius: 999px; vertical-align: middle; }
+.cta.share { margin-top: 16px; }
+
+/* Anúncios: reserva espaço e nunca estoura a largura */
+.ad { margin: 16px auto; min-height: 90px; overflow: hidden; text-align: center; }
+
+/* Celular: nunca rolar para os lados, alvo de toque confortável */
+html, body { overflow-x: hidden; }
+img, ins, table { max-width: 100%; }
+a, button { min-height: 44px; }
+header.top nav a, footer a { display: inline-flex; align-items: center; }
+
+/* Telas muito estreitas (≤ 360px): menu compacto */
+@media (max-width: 360px) {
+  header.top nav { gap: 10px; }
+  header.top nav a { font-size: 0.8rem; }
+  .hero h1 { font-size: 1.5rem; }
+}
+
+/* Tablet/desktop: candidatos lado a lado (no celular continuam empilhados) */
+@media (min-width: 768px) {
+  .proposal-grid, .candidate-heads { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .topics { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .section-head { flex-direction: row; justify-content: space-between; align-items: flex-end; }
+  button, .secondary, .cta { width: auto; }
+  .cta { display: inline-block; padding: 12px 24px; }
+}

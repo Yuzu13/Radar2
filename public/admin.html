@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin — Radar 2T</title>
+    <link rel="stylesheet" href="/admin/admin.css">
+</head>
+
+<body>
+    <main><a href="/">← Voltar ao site</a>
+        <h1>Painel do Radar</h1>
+        <p class="warning">MVP local: este painel não possui autenticação. Não publique assim.</p>
+        <section class="grid">
+            <form id="sourceForm">
+                <h2>Nova fonte</h2><input name="title" placeholder="Título" required><input name="url" placeholder="URL"
+                    type="url" required><input name="publisher" placeholder="Veículo / órgão"><input name="published_at"
+                    type="date"><button>Cadastrar fonte</button>
+            </form>
+            <form id="topicForm">
+                <h2>Novo tema</h2><input name="name" placeholder="Nome" required><input name="slug" placeholder="slug"
+                    required><textarea name="description" placeholder="Descrição"></textarea><input name="sort_order"
+                    placeholder="ordem" type="number"><button>Cadastrar tema</button>
+            </form>
+        </section>
+        <form id="proposalForm">
+            <h2>Nova proposta</h2>
+            <div class="cols"><select name="candidate_id" id="candidate" required></select><select name="topic_id"
+                    id="topic" required></select><select name="source_id" id="source" required></select></div><input
+                name="title" placeholder="Título da proposta" required><textarea name="summary"
+                placeholder="Resumo fiel ao documento original" required></textarea><label><input name="verified"
+                    type="checkbox"> Confirmada após conferência</label><button>Cadastrar proposta</button>
+        </form>
+        <pre id="result"></pre>
+    </main>
+    <script src="/admin/admin.js"></script>
+</body>
+
+</html>
